@@ -1,3 +1,4 @@
+import 'package:ar_sollutions/task1/view/home_screen_t1.dart';
 import 'package:ar_sollutions/task2/view/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

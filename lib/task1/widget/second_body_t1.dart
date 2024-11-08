@@ -1,4 +1,6 @@
+import 'package:ar_sollutions/task1/widget/planning_tile.dart';
 import 'package:ar_sollutions/task2/view/home_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SecondBody extends StatelessWidget {
@@ -24,7 +26,8 @@ class SecondBody extends StatelessWidget {
                   style: const ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(Colors.blue),
                   ),
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen())),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomeScreenT2())),
                   child: const Text('Go to next Task ->')),
             ],
           ),
@@ -53,14 +56,85 @@ class SecondBody extends StatelessWidget {
           const SizedBox(height: 20),
           Row(
             children: [
-              SizedBox(height: 200, width: 300, child: Image.asset('assets/image_3.png')),
-              SizedBox(height: 200, width: 300, child: Image.asset('assets/image_4.png')),
+              Image.asset('assets/image_3.png', height: 150, width: 300),
+              Image.asset('assets/image_4.png', height: 150, width: 300),
             ],
           ),
           Row(
             children: [
-              SizedBox(height: 200, width: 300, child: Image.asset('assets/image_5.png')),
-              SizedBox(height: 200, width: 300, child: Image.asset('assets/image_3.png')),
+              Image.asset('assets/image_5.png', height: 150, width: 300),
+              Image.asset('assets/image_3.png', height: 150, width: 300),
+            ],
+          ),
+          const Row(
+            children: [
+              Text(
+                'Planning',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+              SizedBox(width: 20),
+              Text(
+                'View All',
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
+              ),
+              SizedBox(width: 180),
+              Padding(
+                padding: EdgeInsets.only(right: 8.0),
+                child: Icon(Icons.calendar_month),
+              ),
+              Text(
+                '20 May 2021',
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
+              ),
+            ],
+          ),
+          const Row(
+            children: [
+              PlanningTile(
+                iconColor: Colors.blue,
+                title: 'Reading - Beginner Topic1',
+                icon: CupertinoIcons.book,
+              ),
+              PlanningTile(
+                iconColor: Colors.green,
+                title: 'Reading - Beginner Topic2',
+                icon: CupertinoIcons.pen,
+              ),
+            ],
+          ),
+          const Row(
+            children: [
+              PlanningTile(
+                iconColor: Colors.redAccent,
+                title: 'Listening - Immediate Topic1',
+                icon: Icons.headset,
+              ),
+              PlanningTile(
+                iconColor: Colors.yellow,
+                title: 'Listening - Immediate Topic1',
+                icon: CupertinoIcons.speaker_1,
+              ),
+            ],
+          ),
+          const Row(
+            children: [
+              PlanningTile(
+                iconColor: Colors.green,
+                title: 'Speaking - Beginner Topic1',
+                icon: CupertinoIcons.speaker_1,
+              ),
+              PlanningTile(
+                iconColor: Colors.blue,
+                title: 'Speaking - Beginner Topic1',
+                icon: Icons.headset,
+              ),
             ],
           ),
         ],

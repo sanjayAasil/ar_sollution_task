@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'create_message_screen.dart';
 import 'delete_message_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreenT2 extends StatelessWidget {
+  const HomeScreenT2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.blue,
               ),
               child: Text(
-                'CRUD Operations',
+                'Notes',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -74,6 +74,9 @@ class HomeScreen extends StatelessWidget {
       ),
       appBar: AppBar(
         title: const Text('Firebase CRUD service'),
+        actions: [
+          TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text('Go back'))
+        ],
       ),
       body: const Center(
         child: Text(
