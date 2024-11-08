@@ -36,13 +36,14 @@ class ThirdBody extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('Ms Dhoni'),
+                      Text('Mr Sanjay'),
                       Text(
                         'Basic plan',
                         style: TextStyle(color: Colors.blue, fontSize: 10),
                       ),
                     ],
                   ),
+                  SizedBox(width: 40),
                   Icon(
                     Icons.more_vert_rounded,
                     color: Colors.grey,
@@ -85,6 +86,25 @@ class ThirdBody extends StatelessWidget {
               number: '100',
             ),
           ],
+        ),
+        const Row(
+          children: [
+            Text(
+              'Activity',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(width: 100),
+            Text('Day   Week   Month'),
+          ],
+        ),
+        const SizedBox(height: 20),
+        Image.asset(
+          'assets/image_6.png',
+          height: 250,
+          width: 250,
         ),
       ],
     );

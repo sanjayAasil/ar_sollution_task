@@ -16,19 +16,31 @@ class SecondBody extends StatelessWidget {
           Row(
             children: [
               const Text(
+                '**Note: Make it full screen to see all the widgets clearly',
+                style: TextStyle(
+                  fontSize: 10,
+                ),
+              ),
+              const SizedBox(width: 200),
+              TextButton(
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.blue),
+                ),
+                onPressed: () =>
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomeScreenT2())),
+                child: const Text('Go to next Task ->'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          const Row(
+            children: [
+              Text(
                 'Hello BRUNO, welcome back!',
                 style: TextStyle(
                   color: Colors.blue,
                 ),
               ),
-              const SizedBox(width: 30),
-              TextButton(
-                  style: const ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(Colors.blue),
-                  ),
-                  onPressed: () =>
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomeScreenT2())),
-                  child: const Text('Go to next Task ->')),
             ],
           ),
           const SizedBox(height: 30),
@@ -95,20 +107,7 @@ class SecondBody extends StatelessWidget {
               ),
             ],
           ),
-          const Row(
-            children: [
-              PlanningTile(
-                iconColor: Colors.blue,
-                title: 'Reading - Beginner Topic1',
-                icon: CupertinoIcons.book,
-              ),
-              PlanningTile(
-                iconColor: Colors.green,
-                title: 'Reading - Beginner Topic2',
-                icon: CupertinoIcons.pen,
-              ),
-            ],
-          ),
+          const SizedBox(height: 40),
           const Row(
             children: [
               PlanningTile(
