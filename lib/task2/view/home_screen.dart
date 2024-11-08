@@ -1,4 +1,3 @@
-// lib/screens/home_screen.dart
 
 import 'package:ar_sollutions/task2/view/read_message_screen.dart';
 import 'package:ar_sollutions/task2/view/update_message_screen.dart';
@@ -7,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'create_message_screen.dart';
 import 'delete_message_screen.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer( // Optional: Add a drawer for navigation
+      drawer: Drawer(
+        // Optional: Add a drawer for navigation
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -74,11 +73,11 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: const Text('Firestorm CRUD Demo'),
+        title: const Text('Firebase CRUD service'),
       ),
       body: const Center(
         child: Text(
-          'Welcome to Firestorm CRUD Demo!',
+          'Welcome to Firebase CRUD Service\nClick the menu to get started!',
           style: TextStyle(fontSize: 20),
         ),
       ),
