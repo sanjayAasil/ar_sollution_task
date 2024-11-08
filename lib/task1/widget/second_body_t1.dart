@@ -1,4 +1,4 @@
-import 'package:ar_sollutions/common_widget.dart';
+import 'package:ar_sollutions/task2/view/home_page_t2.dart';
 import 'package:flutter/material.dart';
 
 class SecondBody extends StatelessWidget {
@@ -7,18 +7,30 @@ class SecondBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(50.0),
+      padding: const EdgeInsets.all(50.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Hello BRUNO, welcome back!',
-            style: TextStyle(
-              color: Colors.blue,
-            ),
-          ),
-          SizedBox(height: 30),
           Row(
+            children: [
+              const Text(
+                'Hello BRUNO, welcome back!',
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
+              ),
+              const SizedBox(width: 30),
+              TextButton(
+                  style: const ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Colors.blue),
+                  ),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomePageT2())),
+                  child: const Text('Go to next Task ->')),
+            ],
+          ),
+          const SizedBox(height: 30),
+          const Row(
             children: [
               Text(
                 'My Courses',
@@ -39,7 +51,7 @@ class SecondBody extends StatelessWidget {
               Text('Search'),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             children: [
               SizedBox(height: 200, width: 300, child: Image.asset('assets/image_3.png')),

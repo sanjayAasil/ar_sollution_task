@@ -1,8 +1,14 @@
+import 'package:ar_sollutions/task2/view/home_page_t2.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-import 'View/home_screen.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-void main() {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -13,13 +19,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.blue,
         appBarTheme: const AppBarTheme(
-          foregroundColor: Colors.blue,
+          backgroundColor: Colors.blue,
         ),
       ),
-      home: const HomeScreen(),
+      home: const HomePageT2(),
     );
   }
 }

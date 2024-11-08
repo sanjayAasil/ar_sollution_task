@@ -1,8 +1,7 @@
-import 'package:ar_sollutions/View/second_body.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'first_body.dart';
+import '../widget/first_body_t1.dart';
+import '../widget/second_body_t1.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

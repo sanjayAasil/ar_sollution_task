@@ -89,7 +89,7 @@ class FirstBody extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 8.0),
+                        padding: EdgeInsets.only(left: 30.0),
                         child: Text(
                           'Go to PRO',
                           style: TextStyle(
