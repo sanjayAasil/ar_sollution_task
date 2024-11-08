@@ -1,4 +1,4 @@
-import 'package:ar_sollutions/task2/view/home_page_t2.dart';
+import 'package:ar_sollutions/task2/view/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class SecondBody extends StatelessWidget {
@@ -24,8 +24,7 @@ class SecondBody extends StatelessWidget {
                   style: const ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(Colors.blue),
                   ),
-                  onPressed: () =>
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomePageT2())),
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen())),
                   child: const Text('Go to next Task ->')),
             ],
           ),
